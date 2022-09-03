@@ -1,0 +1,27 @@
+{
+  "name": "prime_number_generator",
+  "version": "1.0.0",
+  "description": "It gives the list of prime numbers between a certain range provided by the user.",
+  "main": "prime_number_generator.js",
+  "scripts": {
+    "test": "jest --runInBand --detectOpenHandles --forceExit --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swastik21/Prime-Number-Generator.git"
+  },
+  "keywords": [
+    "javascript",
+    "prime",
+    "number",
+    "seive",
+    "of",
+    "erathosthenes"
+  ],
+  "author": "swastik poojari",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/swastik21/Prime-Number-Generator/issues"
+  },
+  "homepage": "https://github.com/swastik21/Prime-Number-Generator#readme"
+}
