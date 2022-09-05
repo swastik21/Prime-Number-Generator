@@ -3,13 +3,14 @@ const mongoose = require('mongoose');
 const Log = require('../models/log');
 const PrimeNumberGenerator = require('../engine/prime_number_generator');
 const userChoice = require('../utils/user_choice');
+const config = require('../config/config');
 
 const app = express();
 app.use(express.json());
 
 const port = process.env.PORT || 8080;
 
-const dbUri = "your collection uri";
+const dbUri = config;
 mongoose.connect(dbUri)
 .then(() => app.listen(port, ()=> console.log(`Listening on port ${port}..`)))
 .catch((err)=> console.log(err));
