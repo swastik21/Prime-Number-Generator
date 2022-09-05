@@ -3,10 +3,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const logSchema = new Schema({
-    primeNumbers: {
-        type: String,
-        required: true
-    },
     range: {
         type: String,
         required: true

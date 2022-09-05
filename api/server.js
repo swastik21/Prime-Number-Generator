@@ -30,7 +30,6 @@ app.get('/generator', (req, res)=> {
         const result = userChoice(newRange,choice);
 
         const log = Log({
-            primeNumbers: result[0][0].toString(),
             range: range,
             timeElapsed: `${result[1]}ms`,
             algorithm: result[0][2],
@@ -38,9 +37,17 @@ app.get('/generator', (req, res)=> {
         });
 
         log.save()
-        .then((result)=> res.status(200).send(result))
+        .then((result)=> console.log(result))
         .catch((e)=> console.log(e));
-        
+
+        const responseData = {
+            primeNumbers: result[0][0].toString(),
+            timeElapsed: `${result[1]}ms`,
+            algorithm: result[0][2],
+            numberOfPrime: result[0][1].toString()
+        }
+
+        res.status(200).send(JSON.stringify(responseData));
     }catch(e){
         e = "Please provide only valid values";
         const responseData = {
