@@ -2,9 +2,12 @@
   "name": "prime_number_generator",
   "version": "1.0.0",
   "description": "It gives the list of prime numbers between a certain range provided by the user.",
-  "main": "prime_number_generator.js",
+  "main": "index.js",
   "scripts": {
-    "test": "jest --runInBand --detectOpenHandles --forceExit --coverage"
+    "server": "node api/server.js",
+    "engine": "node index.js",
+    "test": "jest --coverage",
+    "db": "node db/database.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +26,11 @@
   "bugs": {
     "url": "https://github.com/swastik21/Prime-Number-Generator/issues"
   },
-  "homepage": "https://github.com/swastik21/Prime-Number-Generator#readme"
+  "homepage": "https://github.com/swastik21/Prime-Number-Generator#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "jest-extended": "^3.1.0",
+    "mongodb": "^4.9.1",
+    "mongoose": "^6.5.4"
+  }
 }
