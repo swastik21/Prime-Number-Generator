@@ -9,7 +9,7 @@ app.use(express.json());
 
 const port = process.env.PORT || 8080;
 
-const dbUri = "mongodb+srv://admin:admin%40123@primegenerator.sltkwxr.mongodb.net/PrimeGenerator?retryWrites=true&w=majority";
+const dbUri = "your collection uri";
 mongoose.connect(dbUri)
 .then(() => app.listen(port, ()=> console.log(`Listening on port ${port}..`)))
 .catch((err)=> console.log(err));
