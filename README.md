@@ -11,8 +11,8 @@ A robust and efficient engine that could generate Prime Numbers between a range 
 - ### Generation Stratergies
 
     1. Sieve of EratosThenes
-    2. Sieve of Sundaram
-    3. Sieve of Atkin
+     2. Sieve of Sundaram
+      3. Sieve of Atkin
 
 
 ## Authors
