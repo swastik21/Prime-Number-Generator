@@ -1,6 +1,9 @@
 const PrimeNumberGenerator = require('../engine/prime_number_generator');
 const { error } = require('console');
 
+/* This function will take the range and the choice and 
+will return the Prime Numbers from particular method based on choice. */
+
 function userChoice(nums,choice){
     let result;
     const primeNumberGenerator = new PrimeNumberGenerator(nums);

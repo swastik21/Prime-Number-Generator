@@ -1,3 +1,6 @@
+/* This Class contains the algorithms used for the generation 
+of prime numbers. it take range as the paramter. */
+
 class PrimeNumberGenerator{
 
     constructor(range){
@@ -5,6 +8,11 @@ class PrimeNumberGenerator{
         this.timeTaken;
     }
 
+    /* Sieve of Eratosthenes is one of the oldest and easiest 
+    methods for finding prime numbers up to a given number.
+    It is based on marking as composite all the multiples of 
+    a prime. the time complexity of the sieve of Eratosthenes will be 
+    O(nloglogn}) */
     get sieveOfEratosthenes(){
         this.nums = this.nums.map((num)=> parseInt(num));
         this.nums[0] = this.nums[0] == 1 || this.nums[0] == 0 ? 2 : this.nums[0];
@@ -36,6 +44,10 @@ class PrimeNumberGenerator{
         return [primeNumbers,primeNumbers.length,"Seive of Eratosthenes"];
     }
 
+    /* Sieve of Sundaram follows the same operation of crossing out 
+    the composite numbers as the sieve of Eratosthenes. However, 
+    it does that with a different formula(i+j+2ij). 
+    the time complexity for this algorithm will be O(nlogn) */
     get sieveOfSundaram(){
         this.nums = this.nums.map((num)=> parseInt(num));
         this.nums[0] = this.nums[0] == 1 || this.nums[0] == 0 ? 2 : this.nums[0];
@@ -73,6 +85,12 @@ class PrimeNumberGenerator{
         return [primeNumbers,primeNumbers.length,"Seive of Sundaram"];
     }
 
+    /* Sieve of Atkin creates a sieve of prime numbers equal to the n
+    except for {2, 3}. It marks off the numbers that are solutions to some 
+    particular quadratic equation. In the end, it eliminates the multiples of 
+    square numbers and returns {2, 3} along with the remaining ones. The result 
+    is the set of prime numbers smaller than n. the time complexity for this 
+    algorithm will be O(n)*/
     get sieveOfAtkin(){
         let primeNumbers = [];
         let isPrime = Array(this.nums[1]).fill(false);
