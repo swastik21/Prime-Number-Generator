@@ -6,8 +6,7 @@
   "scripts": {
     "server": "node api/server.js",
     "engine": "node index.js",
-    "test": "jest --coverage",
-    "db": "node db/database.js"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",

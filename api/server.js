@@ -52,8 +52,6 @@ app.get('/generator', (req, res)=> {
     }catch(e){
         e = "Please provide only valid values";
         const responseData = {
-            data: null,
-            error: true,
             errMessage:e,
         };
         res.status(400).send(JSON.stringify(responseData));

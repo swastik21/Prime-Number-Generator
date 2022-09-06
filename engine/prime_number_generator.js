@@ -33,7 +33,7 @@ class PrimeNumberGenerator{
         timeDiff = endTime - startTime;
         this.timeTaken = timeDiff.toFixed(5);
     
-            return [primeNumbers,primeNumbers.length,"Seive of Eratosthenes"];
+        return [primeNumbers,primeNumbers.length,"Seive of Eratosthenes"];
     }
 
     get sieveOfSundaram(){
